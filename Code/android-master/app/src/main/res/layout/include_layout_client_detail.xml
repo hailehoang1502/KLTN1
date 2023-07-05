@@ -1,21 +1,3 @@
-<!--
-  ~ Copyright (C) 2019 Veli Tasalı
-  ~
-  ~ This program is free software; you can redistribute it and/or
-  ~ modify it under the terms of the GNU General Public License
-  ~ as published by the Free Software Foundation; either version 2
-  ~ of the License, or (at your option) any later version.
-  ~
-  ~ This program is distributed in the hope that it will be useful,
-  ~ but WITHOUT ANY WARRANTY; without even the implied warranty of
-  ~ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-  ~ GNU General Public License for more details.
-  ~
-  ~ You should have received a copy of the GNU General Public License
-  ~ along with this program; if not, write to the Free Software
-  ~ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
-  -->
-
 <layout xmlns:tools="http://schemas.android.com/tools"
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
@@ -54,52 +36,52 @@
             android:layout_marginRight="16dp"
             android:text="@{viewModel.nickname}"
             android:textStyle="bold"
-            app:layout_constraintBottom_toTopOf="@+id/textView13"
-            app:layout_constraintEnd_toStartOf="@+id/versionText"
+            app:layout_constraintBottom_toBottomOf="@+id/image"
+            app:layout_constraintEnd_toEndOf="@id/guidelineEnd"
             app:layout_constraintStart_toEndOf="@+id/image"
             app:layout_constraintTop_toTopOf="@+id/image"
             tools:text="@tools:sample/cities" />
 
-        <TextView
-            android:id="@+id/textView13"
-            style="@style/TextAppearance.Secondary.SingleLine"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:text="@{viewModel.product}"
-            app:layout_constraintBottom_toBottomOf="@+id/image"
-            app:layout_constraintEnd_toEndOf="@+id/text1"
-            app:layout_constraintHorizontal_bias="0.5"
-            app:layout_constraintStart_toStartOf="@+id/text1"
-            app:layout_constraintTop_toBottomOf="@+id/text1"
-            tools:text="@tools:sample/lorem" />
+<!--        <TextView-->
+<!--            android:id="@+id/textView13"-->
+<!--            style="@style/TextAppearance.Secondary.SingleLine"-->
+<!--            android:layout_width="0dp"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:text="@{viewModel.product}"-->
+<!--            app:layout_constraintBottom_toBottomOf="@+id/image"-->
+<!--            app:layout_constraintEnd_toEndOf="@+id/text1"-->
+<!--            app:layout_constraintHorizontal_bias="0.5"-->
+<!--            app:layout_constraintStart_toStartOf="@+id/text1"-->
+<!--            app:layout_constraintTop_toBottomOf="@+id/text1"-->
+<!--            tools:text="@tools:sample/lorem" />-->
 
-        <TextView
-            android:id="@+id/notSupportedText"
-            style="@style/TextAppearance.Secondary"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="24dp"
-            android:maxLines="5"
-            android:gravity="center"
-            android:text="@string/client_not_supported_notice"
-            android:visibility="@{viewModel.supported ? View.GONE : View.VISIBLE }"
-            app:layout_constraintBottom_toTopOf="@+id/switchCompat"
-            app:layout_constraintEnd_toEndOf="@id/guidelineEnd"
-            app:layout_constraintHorizontal_bias="0.5"
-            app:layout_constraintStart_toStartOf="@+id/guidelineStart"
-            app:layout_constraintTop_toBottomOf="@+id/profileBarrier" />
+<!--        <TextView-->
+<!--            android:id="@+id/notSupportedText"-->
+<!--            style="@style/TextAppearance.Secondary"-->
+<!--            android:layout_width="0dp"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_marginTop="24dp"-->
+<!--            android:maxLines="5"-->
+<!--            android:gravity="center"-->
+<!--            android:text="@string/client_not_supported_notice"-->
+<!--            android:visibility="@{viewModel.supported ? View.GONE : View.VISIBLE }"-->
+<!--            app:layout_constraintBottom_toTopOf="@+id/switchCompat"-->
+<!--            app:layout_constraintEnd_toEndOf="@id/guidelineEnd"-->
+<!--            app:layout_constraintHorizontal_bias="0.5"-->
+<!--            app:layout_constraintStart_toStartOf="@+id/guidelineStart"-->
+<!--            app:layout_constraintTop_toBottomOf="@+id/profileBarrier" />-->
 
-        <TextView
-            android:id="@+id/versionText"
-            style="@style/TextAppearance.Secondary.SingleLine"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@{viewModel.version}"
-            app:layout_constraintStart_toEndOf="@id/text1"
-            app:layout_constraintEnd_toEndOf="@id/guidelineEnd"
-            app:layout_constraintTop_toTopOf="@+id/image"
-            app:layout_constraintBottom_toBottomOf="@+id/image"
-            tools:text="@tools:sample/lorem" />
+<!--        <TextView-->
+<!--            android:id="@+id/versionText"-->
+<!--            style="@style/TextAppearance.Secondary.SingleLine"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:text="@{viewModel.version}"-->
+<!--            app:layout_constraintStart_toEndOf="@id/text1"-->
+<!--            app:layout_constraintEnd_toEndOf="@id/guidelineEnd"-->
+<!--            app:layout_constraintTop_toTopOf="@+id/image"-->
+<!--            app:layout_constraintBottom_toBottomOf="@+id/image"-->
+<!--            tools:text="@tools:sample/lorem" />-->
 
         <androidx.appcompat.widget.SwitchCompat
             android:id="@+id/switchCompat"
@@ -113,7 +95,7 @@
             app:layout_constraintStart_toStartOf="@+id/guidelineStart"
             app:layout_constraintEnd_toEndOf="@id/guidelineEnd"
             app:layout_constraintBottom_toTopOf="@+id/switchCompat2"
-            app:layout_constraintTop_toBottomOf="@+id/notSupportedText" />
+            app:layout_constraintTop_toBottomOf="@+id/profileBarrier" />
 
         <androidx.appcompat.widget.SwitchCompat
             android:id="@+id/switchCompat2"
@@ -135,7 +117,7 @@
             android:layout_height="wrap_content"
             app:barrierDirection="bottom"
             app:barrierMargin="24dp"
-            app:constraint_referenced_ids="image, textView13"
+            app:constraint_referenced_ids="image, text1"
             tools:layout_editor_absoluteX="24dp"
             tools:layout_editor_absoluteY="32dp" />
 
@@ -150,7 +132,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:orientation="vertical"
-            app:layout_constraintGuide_begin="24dp" />
+            app:layout_constraintGuide_end="387dp" />
 
         <androidx.constraintlayout.widget.Guideline
             android:id="@+id/guidelineEnd"
