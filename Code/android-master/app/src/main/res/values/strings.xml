@@ -348,6 +348,7 @@
     <string name="generate">Generate</string>
     <string name="scan">Scan</string>
     <string name="using_qr_code">Using QR Code</string>
+    <string name="using_ip_address">Using IP Address</string>
     <string name="authors">Authors</string>
     <string name="author">Author</string>
     <string name="error_communication_security_credentials">Mismatching credentials (needs pairing)</string>
